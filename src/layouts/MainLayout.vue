@@ -2,10 +2,8 @@
 import { ref, onMounted, onBeforeUnmount } from 'vue'
 
 
-// scroll container reference
 const scrollArea = ref<HTMLElement | null>(null)
 
-// investigation logic: follow the real scroll
 const handleScroll = () => {
   if (!scrollArea.value) return
 
@@ -26,9 +24,9 @@ onBeforeUnmount(() => {
 </script>
 
 <template>
-  <div class="bg-fill h-screen flex justify-center items-center
+  <div class="bg-fill h-screen flex justify-center items-center text-white
                  bg-[url(/src/assets/mainbg.png)]
-                 bg-no-repeat bg-size-[100%_auto] bg-position-[center_10%]">
+                 bg-no-repeat bg-size-[100%_auto] bg-position-[center_11%]">
 
     <div class="h-full sm:h-[95vh] w-full sm:w-107.5
                    bg-fill relative shadow-xl sm:rounded-4xl overflow-hidden">
@@ -38,7 +36,7 @@ onBeforeUnmount(() => {
 
       <!-- Scroll jurisdiction -->
       <div ref="scrollArea" class="w-full h-full overflow-x-hidden overflow-auto
-                     pt-20 px-4 text-center relative
+                     pt-20 text-center relative
                      animate-fade-in">
         <router-view />
       </div>
