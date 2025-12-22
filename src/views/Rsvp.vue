@@ -9,14 +9,14 @@
       <form @submit.prevent="handleSubmit" class="space-y-4 absolute z-40 -translate-x-1/2 left-1/2 px-6 w-full">
         <div class="mb-6 text-start">
           <label class=" cg_s text-md mb-1" for="name">
-            Name<span class="text-red-500">*</span>
+            {{ $t('name') }}<span class="text-red-500">*</span>
           </label>
           <input id="name" name="name" v-model="form.name" type="text"
             class="w-full border rounded px-3 py-2 border-gold " required="true">
         </div>
         <div class="mb-6 text-start">
           <label class=" cg_s text-md mb-1" for="name">
-            Furigana (Optional)
+            {{ $t('furigana') }}
           </label>
           <input id="furigana" name="furigana" v-model="form.furigana" type="text"
             class="w-full border rounded px-3 py-2 border-gold ">
@@ -24,14 +24,14 @@
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
           <div class="text-start">
             <label class=" cg_s text-md mb-1" for="email">
-              Email<span class="text-red-500">*</span>
+              {{ $t('email') }}<span class="text-red-500">*</span>
             </label>
             <input id="email" name="email" v-model="form.email" type="email"
               class="w-full border rounded px-3 py-2 border-gold " required="true">
           </div>
           <div class="text-start">
             <label class=" cg_s text-md mb-1" for="phone">
-              Phone number<span class="text-red-500">*</span>
+              {{ $t('phone_number') }}<span class="text-red-500">*</span>
             </label>
             <input id="phone" name="phone" type="tel" v-model="form.phone"
               class="w-full border rounded px-3 py-2 border-gold " required="true">
@@ -39,41 +39,41 @@
         </div>
         <div class="mb-6 text-start">
           <label class=" cg_s text-md mb-1" for="guestSide">
-            Which side are you from<span class="text-red-500">*</span>
+            {{ $t('wh_side') }}<span class="text-red-500">*</span>
           </label>
           <select id="guestSide" name="guestSide" v-model="form.guestSide"
             class="w-full border rounded px-3 py-2 border-gold " required="true">
-            <option value="groom">Groom side</option>
-            <option selected="true" value="bride">Bride side</option>
+            <option value="groom">{{ $t('groom_side') }}</option>
+            <option selected="true" value="bride">{{ $t('bride_side') }}</option>
           </select>
         </div>
         <div class="mb-6 text-start">
           <label class=" cg_s text-md mb-1" for="willAttend">
-            Will you attend?<span class="text-red-500">*</span>
+            {{ $t('will_attend') }}<span class="text-red-500">*</span>
           </label>
           <select id="willAttend" name="willAttend" v-model="form.willAttend"
             class="w-full border rounded px-3 py-2 border-gold " required="true">
-            <option selected="true" value="Yes">Yes</option>
-            <option value="No">No</option>
+            <option selected="true" value="Yes">{{ $t('yes') }}</option>
+            <option value="No">{{ $t('no') }}</option>
           </select>
         </div>
         <div class="mb-6 text-start">
           <label class=" cg_s text-md mb-1" for="foodAllergy">
-            Do you have any food allergy? (Optional)
+            {{$t('food_allergy')}}
           </label>
           <textarea id="foodAllergy" name="foodAllergy" v-model="form.foodAllergy"
             class="w-full border rounded px-3 py-2 border-gold "></textarea>
         </div>
         <div class="mb-6 text-start">
           <label class=" cg_s text-md mb-1" for="otherQuestions">
-            Do you have any other questions? (Optional)
+            {{ $t('other_qa') }}
           </label>
           <textarea id="otherQuestions" name="otherQuestions" v-model="form.otherQuestions"
             class=" w-full border rounded px-3 py-2 border-gold " rows="2"></textarea>
         </div>
         <div class="mb-12 text-start">
           <label class=" cg_s text-md mb-1" for="message">
-            Your wishes to the couple (Optional)
+            {{ $t('wishes') }}
           </label>
           <textarea id="message" name="message" v-model="form.message"
             class=" w-full border rounded px-3 py-2 border-gold" rows="3"></textarea>
@@ -81,7 +81,7 @@
         <button type="submit" :disabled="!isFormValid" class="z-50 text-xl cg_s tracking-wider guide-button w-50 h-11.25 rounded-full
          flex items-center justify-center m-auto border cursor-pointer
          disabled:opacity-40 disabled:cursor-not-allowed">
-          Confirm
+          {{ $t('confirm') }}
         </button>
         <img src="/src\assets\deco4.png" alt="Decoration4" class="mt-10 mb-10 w-20 m-auto">
         <div class="relative mt-13">

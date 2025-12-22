@@ -1,28 +1,23 @@
 <template>
   <section>
-    <div id="page-content" class="w-full overflow-scroll h-full">
+    <div id="page-content" class="w-full overflow-scroll h-full overflow-x-hidden">
       <BackButton />
-      <p class="text-5xl is_c text-gold italic text-center mb-2">Us</p>
+      <p v-if="locale === 'en'" class="text-5xl is_c text-gold italic text-center mb-2">Us</p>
+      <p v-if="locale === 'ja'" class="text-3xl cg_s text-gold text-center mb-2">結婚までの物語</p>
       <div class="w-4/5 mx-auto aspect-square overflow-hidden my-6 relative">
         <img src="/src\assets\frame.png" alt="Our Story Decoration"
           class="w-full h-full object-cover absolute top-0 left-0 z-10">
         <img src="/src\assets\us2.png" alt="Our Story" class="h-auto mb-6 pt-5 w-[90%] mx-auto">
       </div>
       <div class="px-4 pt-6">
-        <p class="text-gold text-3xl text-center mb-4 cg_s">A Date Talking About Stars</p>
-        <p class="text-center text-lg cg_s mb-4">
-          Their first date of Shiva and Parvati was at a small Italian restaurant in Tokyo, where
-          they talked rockets and satellites. They also wondered about the planets and galaxies out there and when time
-          began. It took them so much time to finish a small pizza because they were so busy talking about the universe.
-        </p>
+        <p class="text-gold text-3xl text-center mb-4 cg_s">{{ $t('story_1_title') }}</p>
+        <p class="text-center text-lg cg_s mb-4 opacity-90">{{ $t('story_1_desc') }}</p>
         <div class="flex justify-items-start flex-col opacity-90">
           <div class="text-start">
-            <span class="text-gold font-bold sm_s">Parvati: </span><span class="italic cg_s text-lg">What a tall guy and
-              he can develop a wesite!?</span><br>
+            <span class="text-gold font-bold sm_s">Parvati: </span><span class="italic cg_s text-lg">{{ $t('story_1_b') }}</span><br>
           </div>
           <div class="text-start">
-            <span class="text-gold font-bold sm_s">Shiva: </span><span class="italic cg_s text-lg">What a petite girl
-              but she can design a website!?</span>
+            <span class="text-gold font-bold sm_s">Shiva: </span><span class="italic cg_s text-lg">{{ $t('story_1_g') }}</span>
           </div>
         </div>
       </div>
@@ -37,13 +32,8 @@
         </div>
       </div>
       <div class="mt-6">
-        <p class="text-gold text-3xl text-center mb-4 cg_s">The Differences</p>
-        <p class="px-4 mb-14 text-center cg_s text-lg">They are similar yet different. He is disciplined, and she is
-          spontaneous. He
-          is more like a scientist, and she is more like an artist. He knows facts and figures, and she knows feelings
-          and emotions. After all, they came from different countries, are brought up in different cultures, and have
-          different personalities. Conflicts are inevitable, they do argue like any other couple, but they always make
-          an effort to communicate, listen, understand and respect each other.</p>
+        <p class="text-gold text-3xl text-center mb-4 cg_s">{{$t('story_2_title')}}</p>
+        <p class="px-4 mb-14 text-center cg_s text-lg opacity-90">{{ $t('story_2_desc') }}</p>
         <div class="w-full flex my-6 relative">
           <img src="/src\assets\us3.png" alt="Our Story 3" class="w-[50%] h-auto">
           <img src="/src\assets\us4.png" alt="Our Story 4" class="w-[50%] h-auto">
@@ -53,35 +43,25 @@
         <div class="px-4">
           <div class="flex justify-items-start flex-col opacity-90">
             <div class="text-start">
-              <span class="text-gold font-bold sm_s">Parvati: </span><span class="italic cg_s text-lg">He is simple and
-                logical at the same
-                time. And I hate it when he is right.</span><br>
+              <span class="text-gold font-bold sm_s">Parvati: </span><span class="italic cg_s text-lg">{{ $t('story_2_b') }}</span><br>
             </div>
             <div class="text-start">
-              <span class="text-gold font-bold sm_s">Shiva: </span><span class="italic cg_s text-lg">Somehow she's
-                really good at getting
-                help from people. (chuckles) </span>
+              <span class="text-gold font-bold sm_s">Shiva: </span><span class="italic cg_s text-lg">{{ $t('story_2_g') }}</span>
             </div>
           </div>
 
         </div>
       </div>
-      <p class="text-gold text-3xl text-center mb-4 mt-10 cg_s">What Comes Next</p>
+      <p class="text-gold text-3xl text-center mb-4 mt-10 cg_s">{{ $t('story_3_title') }}</p>
       <div class="px-4 text-center cg_s mb-4">
-        <p class="text-lg">They don't know what the future holds for them, but they are excited to find out. They
-          decided to get married
-          so that they continue enjoying what they love doing together.</p>
+        <p class="text-lg">{{ $t('story_3_desc') }}</p>
         <div class="flex justify-items-start flex-col  opacity-90">
           <div class="text-start">
-            <span class="text-gold font-bold sm_s">Parvati: </span><span class="italic cg_s text-lg">I still don't know
-              how to call him
-              "honey". (chuckles)</span>
+            <span class="text-gold font-bold sm_s">Parvati: </span><span class="italic cg_s text-lg">{{ $t('story_3_b') }}</span>
             <br>
           </div>
           <div class="text-start">
-            <span class="text-gold font-bold sm_s">Shiva: </span><span class="italic cg_s text-lg ">The only change
-              after the marriage is
-              that I have a piece of metal on my finger. </span>
+            <span class="text-gold font-bold sm_s">Shiva: </span><span class="italic cg_s text-lg ">{{ $t('story_3_g') }}</span>
           </div>
         </div>
       </div>
@@ -89,7 +69,7 @@
           class="w-full h-auto my-6"></div>
       <img src="/src\assets/deco21.png" alt="Our Story Decoration" class="m-auto w-2/5">
       <div class="text-center mt-10 mb-10 text-base cg_s opacity-90">
-        <p>Design &amp; Implementation by Taksh Gadhiya</p>
+        <p>{{ $t('ownership') }}</p>
         <p>© Copyright 2025. All Rights Reserved.</p>
       </div>
     </div>
@@ -105,4 +85,6 @@
 import BackButton from '../components/BackButton.vue';
 import DownFrame from '../components/DownFrame.vue';
 import LanguageChanger from '../components/LanguageChanger.vue';
+import { useI18n } from 'vue-i18n'
+const { locale } = useI18n()
 </script>
