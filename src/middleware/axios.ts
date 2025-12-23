@@ -30,9 +30,9 @@ apiClient.interceptors.response.use(
     },
     (error) => {
         if (error.response) {
-            alert("API Error: " + error.response.data);
+            console.log("API Error: " + error.response.data);
         } else {
-            alert("Network Error:" + error.message);
+            console.log("Network Error:" + error.message);
         }
 
         return Promise.reject(error);
