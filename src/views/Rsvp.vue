@@ -92,15 +92,17 @@
         </div>
       </form>
     </div>
+    <Loader :isLoading="isLoading" :message="'sending'" />
   </section>
 </template>
 <script setup lang="ts">
 import BackButton from '../components/BackButton.vue';
 import DownFrame from '../components/DownFrame.vue';
 import LanguageChanger from '../components/LanguageChanger.vue';
-import { reactive, computed } from 'vue'
+import { reactive, computed, ref } from 'vue'
 import apiClient from "../middleware/axios";
 import Swal from 'sweetalert2'
+import Loader from '../components/Loader.vue';
 
 const form = reactive({
   name: '',
@@ -136,8 +138,9 @@ const isFormValid = computed(() => {
     form.willAttend.trim() !== ''
   )
 })
-
+const isLoading = ref(false)
 const handleSubmit = async () => {
+  isLoading.value = true
   if (!isFormValid.value) return
   const payload = { ...form }
 
@@ -163,6 +166,8 @@ const handleSubmit = async () => {
       showConfirmButton: false,
       timer: 1500
     })
+  } finally {
+    isLoading.value = false
   }
 }
 
