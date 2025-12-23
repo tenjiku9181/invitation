@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const apiClient = axios.create({
-    baseURL: "http://localhost:5200/",
+    baseURL: "https://invitation-server-nu.vercel.app/",
     timeout: 10000,
     headers: {
         "Content-Type": "application/json",
