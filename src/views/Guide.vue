@@ -5,8 +5,8 @@
       <p v-if="locale === 'en'" class="text-5xl is_c text-gold italic text-center">Venue</p>
       <p v-if="locale === 'ja'" class="text-4xl cg_s text-gold text-center">会場のご案内</p>
       <div class="w-full relative h-72.5 mt-6">
-        <img src="/src\assets\room1.jpeg" alt="room1" class="absolute top-0 w-full object-contain">
-        <img src="/src\assets\deco1.png" alt="Decoration1"
+        <img src="/src\assets\deco\room1.jpeg" alt="room1" class="absolute top-0 w-full object-contain">
+        <img src="/src\assets\deco\deco1.png" alt="Decoration1"
           class="absolute -bottom-11.25 w-62.5 left-1/2 -translate-x-1/2">
       </div>
       <div class="mt-16 px-8 text-center">

@@ -4,14 +4,14 @@
             <TransitionRoot appear :show="isShowing" as="template" enter="transform transition duration-[1000ms]"
                 enter-from="opacity-0 scale-50" enter-to="opacity-100 scale-100">
                 <div class="w-full h-full object-cover rounded-full">
-                    <img src="/src\assets\home.png" alt="Wedding Photo" class="w-full h-full object-cover rounded-full">
-                    <img src="/src\assets\deco1.png" alt="deco1"
+                    <img src="/src\assets\img/home.png" alt="Wedding Photo" class="w-full h-full object-cover rounded-full">
+                    <img src="/src\assets\deco\deco1.png" alt="deco1"
                         class="absolute -bottom-8.75 left-1/2 w-62.5 -translate-x-1/2 ">
                 </div>
             </TransitionRoot>
         </div>
-        <img src="/src\assets\deco3.png" alt="Decoration3" class="absolute top-125 -left-15 w-37.5 z-10 opacity-60">
-        <img src="/src\assets\deco7.png" alt="Decoration7"
+        <img src="/src\assets\deco\deco3.png" alt="Decoration3" class="absolute top-125 -left-15 w-37.5 z-10 opacity-60">
+        <img src="/src\assets\deco\deco7.png" alt="Decoration7"
             class="absolute top-237.5 -right-12.5 w-37.5 z-10 opacity-60 -scale-x-100">
         <div class="z-20 absolute w-full left-1/2 -translate-x-1/2 px-4">
             <p class="text-5xl text-gold mt-12 is_c">Launch to Forever</p>
@@ -43,8 +43,8 @@
                 class="w-45 h-10 flex items-center justify-center m-auto text-gold mt-4 border guide-button cursor-pointer">
                 <p class="cg_s tracking-wide text-xl!">{{ $t('access_guide') }}</p>
             </a>
-            <img src="/src\assets\deco2.png" alt="Rocket" class="-bottom-10.75 w-47.5  mx-auto mt-12 mb-8">
-            <div class="w-full h-100 object-cover mt-10 relative px-6"><img src="/src\assets\masaru.png"
+            <img src="/src\assets\deco\deco2.png" alt="Rocket" class="-bottom-10.75 w-47.5  mx-auto mt-12 mb-8">
+            <div class="w-full h-100 object-cover mt-10 relative px-6"><img src="/src\assets\img\groom.png"
                     alt="Groom portrait" class="absolute w-75 h-100 object-cover -right-12.5">
                 <div class="absolute left-4 top-5  tracking-wider">
                     <p class="right-0 font-title text-gold text-4xl bm_s font-bold tracking-wider">{{ $t('lord') }}</p>
@@ -55,9 +55,9 @@
                     <p class="cs_s leading-relaxed opacity-85">{{ $t('g_tag_1') }}</p>
                     <p class="cs_s leading-relaxed opacity-85">{{ $t('g_tag_2') }}</p>
                 </div>
-                <img src="/src\assets\deco8.png" alt="Decoration8" class="absolute top-80 -left-5 w-46.5 z-10">
+                <img src="/src\assets\deco\deco8.png" alt="Decoration8" class="absolute top-80 -left-5 w-46.5 z-10">
             </div>
-            <div class="w-full h-100 object-cover mt-16 relative "><img src="/src\assets\trang.png" alt="Bride portrait"
+            <div class="w-full h-100 object-cover mt-16 relative "><img src="/src\assets\img\bride.png" alt="Bride portrait"
                     class="absolute w-75 h-100 object-cover -left-5">
                 <div class="absolute right-0 top-10  tracking-wider">
                     <p class="right-0 font-title text-gold text-4xl bm_s font-bold tracking-wider">{{ $t('parvati') }}</p>
@@ -71,8 +71,8 @@
                     </div>
                 </div>
             </div>
-            <div class="w-full mt-10 relative h-55"><img src="/src\assets\deco16.png" alt="Decoration16"
-                    class="absolute -top-17.5 -right-5 w-20 opacity-60 -scale-x-100"><img src="/src\assets\deco17.png"
+            <div class="w-full mt-10 relative h-55"><img src="/src\assets\deco\deco16.png" alt="Decoration16"
+                    class="absolute -top-17.5 -right-5 w-20 opacity-60 -scale-x-100"><img src="/src\assets\deco\deco17.png"
                     alt="Decoration17" class="absolute -bottom-17.5 -left-2.5 w-25 opacity-60 -scale-x-100">
                 <div class="w-full absolute top-0 h-fit z-10">
                     <p class="text-5xl text-gold is_c text-gold italic mb-4">Will you be there?</p>
@@ -88,7 +88,7 @@
 
             <a href="/indian-wedding" class="block w-full mt-8 cursor-pointer">
                 <div class="w-full flex border border-gold p-4 items-center rounded-xl"><img
-                        src="/src\assets\deco12.png" class="w-1/2 p-2">
+                        src="/src\assets\deco\deco12.png" class="w-1/2 p-2">
                     <div>
                         <p class="text-lg mb-6 text-left cs_s opacity-85 ">
                             <span v-if="locale === 'en'" class="font-heading text-gold text-5xl is_c text-gold italic my-0">Indian Wedding</span>
@@ -108,7 +108,7 @@
                         <p class="text-5xl mb-6 font-heading text-left text-fill pl-2 is_c text-gray-600 italic">Us</p>
                         <p v-if="locale === 'en'" class="text-body text-fill text-gray-600 opacity-85 cs_s">More of what made <br> this happen</p>
                         <p v-if="locale === 'ja'" class="text-body text-fill text-gray-600 opacity-85 cs_s">結婚までの物語</p>
-                    </div><img src="/src\assets\us1.png" class="w-1/2">
+                    </div><img src="/src\assets\img\us1.png" class="w-1/2">
                 </div>
             </a>
             <div class="relative">

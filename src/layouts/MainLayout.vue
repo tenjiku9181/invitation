@@ -25,13 +25,13 @@ onBeforeUnmount(() => {
 
 <template>
   <div class="bg-fill h-screen flex justify-center items-center text-white
-                 bg-[url(/src/assets/mainbg.png)]
+                 bg-[url(/src/assets/deco/mainbg.png)]
                  bg-no-repeat bg-size-[100%_auto] bg-position-[center_11%]">
 
     <div class="h-full sm:h-[95vh] w-full sm:w-107.5
                    bg-fill relative shadow-xl sm:rounded-4xl overflow-hidden">
 
-      <img id="topFrame" src="/src/assets/up_frame.png"
+      <img id="topFrame" src="\src\assets\deco\up_frame.png"
         class="absolute top-0 w-full z-50 pointer-events-none scale-110">
 
       <!-- Scroll jurisdiction -->

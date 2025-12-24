@@ -3,8 +3,8 @@
     <div id="page-content" class="w-full overflow-scroll h-full">
       <BackButton />
       <p class="text-5xl is_c text-gold italic text-center mb-2">Reply Form</p>
-      <img src="/src\assets\deco3.png" alt="Decoration3" class="absolute top-200 -left-7.5 w-37.5 opacity-40">
-      <img src="/src\assets\deco7.png" alt="Decoration7"
+      <img src="/src\assets\deco\deco3.png" alt="Decoration3" class="absolute top-200 -left-7.5 w-37.5 opacity-40">
+      <img src="/src\assets\deco\deco7.png" alt="Decoration7"
         class="absolute top-100 -right-5 w-37.5  opacity-40 -scale-x-100">
       <form @submit.prevent="handleSubmit" class="space-y-4 absolute z-40 -translate-x-1/2 left-1/2 px-6 w-full">
         <div class="mb-6 text-start">
@@ -83,7 +83,7 @@
          disabled:opacity-40 disabled:cursor-not-allowed">
           {{ $t('confirm') }}
         </button>
-        <img src="/src\assets\deco4.png" alt="Decoration4" class="mt-10 mb-10 w-20 m-auto">
+        <img src="/src\assets\deco\deco4.png" alt="Decoration4" class="mt-10 mb-10 w-20 m-auto">
         <div class="relative mt-13">
           <div class="absolute bottom-0 left-1/2 -translate-x-1/2">
             <language-changer />
